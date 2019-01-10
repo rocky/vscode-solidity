@@ -195,7 +195,7 @@ export function mythrilAnalyze() {
             }
 
         } catch (err) {
-            vscode.window.showWarningMessage(err);
+            vscode.window.showWarningMessage(err.message);
             return;
         }
 
