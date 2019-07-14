@@ -86,7 +86,7 @@ export const getRootDirAsync = async (p: string): Promise<string> => {
  * @param {string} directory - path to truffle smart contracts build directory. {
  * @returns {Array<string>} - list of JSON files.
  */
-export const getTruffleBuildJsonFilesAsync = async function(directory: string) {
+export const getTruffleBuildJsonFiles = async function(directory: string) {
     const files = await readdir(directory);
     const filtered = files.filter(f => f !== 'Migrations.json');
     const filePaths = filtered.map(f => path.join(directory, f));
